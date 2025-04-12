@@ -15,18 +15,16 @@ window.onkeydown = function(e) {
         let points = localStorage.getItem('points') ? parseInt(localStorage.getItem('points')) : 0;
     
         // display the current total points from localstorage
-        //document.getElementById('localStoragePoints').innerText = `gem total: ${points}`;
         document.getElementById("gameUI").style.display = "none";
         document.getElementById("fishCaughtList").style.display = "none";
         document.getElementById("fishalert").style.display = "none";
-        //document.getElementById("postfishman").style.display = "none";
       
         document.getElementById("returnBtn").style.display = "none";
     
         function startFish(){
             document.getElementById("gameUI").style.display = "block";
             document.getElementById("fishermanUI").style.display = "none";
-            document.getElementById("bg").style.backgroundImage = "url('img/go fishing.png')";
+            document.getElementById("bg").style.backgroundImage = "url('img/go fishing.png')"; //change the bg to the fishing area
         }
         
     
@@ -87,7 +85,7 @@ window.onkeydown = function(e) {
           // start the game if it's not started yet
           if (!gameStarted && event.code === 'Space') {
             gameStarted = true;
-            document.getElementById('message').innerText = 'Fishing started! Get ready...';
+            document.getElementById('message').innerText = 'Fishing started! Get ready...'; // i forgot why this is here feel free to delete this and the settimeout. those do literally nothing
             setTimeout(() => {
               startQTERound();
             }, 2000);
@@ -111,7 +109,7 @@ window.onkeydown = function(e) {
         });
     
         // function for catching fish
-        function fish() {
+        function fish() { // this is where you put all the fish and the points and the images and whatever
           var fishes = [
             { img: "./img/fishy.png", text: "Red Fish", points: 10 },
             { img: "./img/fishy.png", text: "Blue Fish", points: 20 },
@@ -138,7 +136,6 @@ window.onkeydown = function(e) {
     
        function gameOver() {
            // show all the caught fish when quitting
-          // document.getElementById("postfishman").style.display = "block";
            document.getElementById("player").style.display = "none";
            document.getElementById("fishCaughtList").style.display = "block";
            document.getElementById("localStoragePoints").style.display = "block";
@@ -170,7 +167,37 @@ window.onkeydown = function(e) {
            document.getElementById("message").innerText = "";
          
         }
-    
+
+        function talk() {
+       
+          var phrases = [
+            {
+              text: "Do you enjoy going fishing? ... I think it's very relaxing.",
+            },        
+        {
+          text: "I'm sorry, I'm not much for talking.",
+        },  
+        {
+          text: "... It's very beautiful around here during the night.",
+        },  
+        {
+          text: "...",
+        },  
+        {
+          text: "I don't particularly enjoy causing the fish harm, but I do need to eat...",
+        },  
+        {
+          text: "I recommend going foraging, too.",
+        },  
+        ,
+          ];
+       
+       var chat = phrases[Math.floor(Math.random() * phrases.length)];
+       
+       document.getElementById("textbox").innerHTML =
+          '<p>"' + chat.text + '"<p>'
+     
+     }
         function changesprite() {
             if (document.getElementById("fishersprite").getAttribute('src')=='img/fisherman.png')
             {
@@ -214,33 +241,4 @@ window.onkeydown = function(e) {
      
      }
 
-     function talk() {
-       
-      var phrases = [
-        {
-          text: "stop that.",
-        },        
-    {
-      text: "..?",
-    },  
-    {
-      text: "... do you have to?",
-    },  
-    {
-      text: "...",
-    },  
-    {
-      text: "mh...",
-    },  
-    {
-      text: "just go fishing..",
-    },  
-    ,
-      ];
    
-   var chat = phrases[Math.floor(Math.random() * phrases.length)];
-   
-   document.getElementById("textbox").innerHTML =
-      '<p>"' + chat.text + '"<p>'
- 
- }

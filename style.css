@@ -109,9 +109,6 @@ body {
         padding:10px;
       }
 
-      .postfishman {
-        float:right;
-      }
 
       .gamebutton {
         font-family: "pixeloperator";
@@ -150,6 +147,8 @@ body {
           transform-origin: bottom;
         }
       }
+
+      /* this is where you can change the bg for the screen where that fishing guy hangs around. i am so sorry i'm drunk as shit rn i can't write proper comments lmfao*/
 
     /*  #bg {
         background-image: url("img/fishing\ hut.png");
