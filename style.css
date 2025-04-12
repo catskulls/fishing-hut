@@ -137,6 +137,20 @@ body {
         width:100px;
       }
 
+      @keyframes alertanim {
+        0% {
+          opacity: 0;
+          transform: rotateX(-70deg);
+          transform-origin: bottom;
+        }
+      
+        100% {
+          opacity: 1;
+          transform: rotateX(0);
+          transform-origin: bottom;
+        }
+      }
+
     /*  #bg {
         background-image: url("img/fishing\ hut.png");
         background-size: cover;
