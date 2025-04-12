@@ -1,0 +1,144 @@
+body {
+    background-color: #3d2756;
+    font-size: 1.25em;
+    color:#cbdff0; 
+    line-height: 1.5em; 
+    font-family: 'pixeloperator', sans-serif;
+    }
+
+  
+    a{
+      color:#3d2756;
+      font-style: italic;
+      text-decoration: none;
+     }
+
+    @font-face {
+        font-family: "wayfarer";
+        src: url('./img/wayfarers-toy-box.ttf');
+    }
+    @font-face {
+        font-family: "pixeloperator";
+        src: url('./img/PixelOperator.ttf');
+    }
+
+    #textbox {
+        color:#3d2756;
+        background-color: antiquewhite;
+        padding:30px;
+        border-radius:10px;
+        width:100%;
+        height:280px;
+      }
+      
+      .fishingUIbox {
+        background-color: antiquewhite;
+        padding:20px;
+        border-radius:10px;
+        border:1px solid;
+      }
+      
+      .fishlist {
+        color:#3d2756;
+        background-color: antiquewhite;
+        padding:20px;
+        border-radius:10px;
+        width:250px;
+        height:260px;
+        border: 1px solid;
+        overflow:auto;
+        z-index:20;
+       
+      }
+      
+  
+      .fishing-gems {
+        background-color:antiquewhite;
+        text-align: center;
+        padding:10px;
+        width:100%;
+        margin:10px 0px;
+        border-radius:10px;
+        border:1px solid;
+        display:none;
+      }
+      
+      #fishalert {
+        position:absolute;
+        top:270px;left:440px
+      }
+
+      .gamescreen {
+        padding:40px;
+        background-color:rgb(120, 97, 150);
+        color:darkslateblue;
+        width:100%;
+        height:520px;
+      }
+
+      #fishersprite {
+        width:100%;
+        margin-top:-30px;
+      }
+
+      .container {
+        width:70%;
+        height:520px;
+        overflow:hidden;
+        margin:auto;
+      }
+
+
+      .button {
+        font-family: "pixeloperator";
+          background-color:  rgb(203, 181, 207);
+          text-align:center;
+          color:#5e3f81;
+          margin: 10px 0px;
+          border:#5e3f81 1px solid;
+          border-radius: 10px;
+          padding:10px;
+      }
+      
+      .button:hover{
+        background-color:  rgb(179, 151, 184);
+        text-align:center;
+        color:#5e3f81;
+        margin: 10px 0px;
+        border-radius: 10px;
+        padding:10px;
+      }
+
+      .postfishman {
+        float:right;
+      }
+
+      .gamebutton {
+        font-family: "pixeloperator";
+          background-color:  rgb(203, 181, 207);
+          text-align:center;
+          color:#5e3f81;
+          margin: 10px 0px;
+          border:#5e3f81 1px solid;
+          border-radius: 10px;
+          padding:10px;
+          width:70%;
+      }
+
+      #player {
+        position:absolute;
+        width:100px;
+        top:320px;
+        left:420px;
+        z-index:0
+      }
+
+      #caughtfish{
+        width:100px;
+      }
+
+    /*  #bg {
+        background-image: url("img/fishing\ hut.png");
+        background-size: cover;
+        background-position: center;
+      }*/

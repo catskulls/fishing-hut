@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fishing Hut by catskulls</title>
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+   
+    
+    <div class="container p-4">
+
+            <div class="gamescreen m-4" id="bg">
+
+                <div class="row" id="fishermanUI">
+                    <div class="col-7 p-0">
+                        <div id="fisherman"><img src="img/fisherman.png" id="fishersprite" onclick="changesprite()"></div>
+                    </div>
+                    <div class="col-5 p-0">
+                        <div id="textbox">
+                            <p>"Hey there.</p>
+                            <p>If you're here to fish, you can use the gear over there freely. It's not mine anyway.</p>
+                            <p>I'll buy any fish you catch off you, though. How about it?"</p>
+                        </div>
+                        <div class="button" onclick="startFish()"> Go fish</div>
+                        <div class="button" onclick="talk()">Talk</div>
+                        
+                        
+                    </div>
+                </div>
+                   
+             
+
+                <div id="gameUI" >
+
+                    <img src="img/espurr.png" id="player">
+                    <img src="img/alert.png" id="fishalert">
+                    <div class="fishingUIbox" style="float:right;" id="fishingUI">
+                        <div id="message">Press space to start fishing.</div>
+                        <div id="score">Score: 0</div>
+                        <div id="bait">Bait: 3</div>
+                        <div id="quote"></div>
+
+                    </div>
+                    
+                
+
+                  <div class="col-4 p-0">
+
+                    <div class="fishlist" id="fishCaughtList"><p id="postfish">aaaaa</p></div>
+                    <div class="fishing-gems" id="localStoragePoints"></div> <!-- display points from local storage -->
+                    <div class="gamebutton" id="quitBtn"> Stop fishing</div>
+                    <a href="index.html"><div class="button" id="returnBtn">Back to the fishing hut</div></a>
+
+                  </div>
+
+                    
+                   </div>
+
+
+               
+
+                   
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
